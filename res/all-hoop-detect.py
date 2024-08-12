@@ -65,7 +65,8 @@ for size in 'small medium large'.split(' '):
     path_names = [
         '%s-inner' % size, 
         '%s-outer' % size, 
-        'workarea']
+        'workarea',
+        'adapter']
     bounding_boxes = find_paths_in_layer(svg_file, size, path_names)
 
     for path_name, bbox in bounding_boxes.items():
