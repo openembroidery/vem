@@ -1,0 +1,142 @@
+body {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 50px;
+    height: 100vh;
+    margin: 0;
+    background: silver;
+}
+
+.screen-box {
+    background-color: #f0f0f0;
+    /* padding: 10px; */
+    background-image: url("img/embroidery-machine-bg.jpg");
+    /* background-image: url("embroidery-machine1.jpg"); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 500px;
+}
+
+.machine {
+    perspective: 1250px;
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    left: 0px;
+    transform-style: preserve-3d;
+    /* transform: rotateX(40deg) rotateY(20deg); */
+    /* transform: rotateX(-26deg) rotateY(15deg) rotateZ(0deg); */
+    /* transform: rotateX(-23deg) rotateY(-1deg) rotateZ(0deg); */
+    transform: rotateX(-55deg) rotateY(-4deg) rotateZ(-4deg);
+    /* Sudut X lebih besar untuk efek dari atas */
+}
+
+.plotter {
+    position: absolute;
+    background-color: transparent;
+    border: 3px dotted rgba(255, 0, 0, 0.308);
+    /* border-radius: 20px; */
+    left: 67px;
+    top: 425px;
+    width: 260px;
+    height: 400px;
+    transform: rotateX(90deg) translateZ(387px);
+    box-sizing: border-box;
+
+    --x: -50px;
+    --y: 145px;
+
+    /* --x: 0px; */
+    /* --y: 0px; */
+}
+.plotter::after {
+    content: 'HALF PLOTTER';
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0.308);
+    width: 100px;
+    height: 200px;
+    left: 111px;
+    top: -110px;
+}        
+.plotter::before {
+    content: 'Strong Iron';
+    position: absolute;
+    /* background-color: rgba(255, 0, 0, 0.308); */
+    width: 400px;
+    height: 400px;
+    left: 111px;
+    top: -110px;
+
+    width: 400px;
+    height: 85px;
+    left: 107px;
+    top: -110px;
+    transform: rotateZ(-90deg) translateX(-156px) translateY(-158px);
+    color: white;
+    font-size: x-large;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+.plotter .parallel{
+    position: absolute;
+    width: 593px;
+    height: 185px;
+    top: -4px;
+    left: -122px;
+    border: 2px dashed white;
+    box-sizing: border-box;
+    transform: translateZ(10px) translateY(var(--y)) translateX(var(--x));
+    background: url('img/rail-x.png');
+    /* background: url('rail-x-debug.png'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.plotter .carriage{
+    position: absolute;
+    width: 118px;
+    height: 185px;
+    top: -4px;
+    left: 91px;
+    /* border: 1px solid white; */
+    box-sizing: border-box;
+    transform: translateZ(10px) translateY(var(--y));
+    background: url('img/carriage.png');
+    /* background: url('carriage-debug.png'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hoop-large {
+    position: absolute;
+    width: 261px;
+    height: 346px;
+    left: 353px;
+    top: -39px;
+    transform: translateZ(10px) translateY(var(--y)) translateX(var(--x));
+    background-image: url('img/large.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.machine .fabric {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #FFDAB9;
+    top: 60px;
+    left: 517px;
+    transform: rotateX(90deg) translateZ(7px);
+}
+        
+.machine .axis-xy {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left:0px;
+    bottom: 0;
+    /* transform: rotateX(0deg); */
+    border-left: 2px dashed lime;
+    border-bottom: 2px dashed red;
+}
