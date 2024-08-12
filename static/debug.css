@@ -1,0 +1,91 @@
+body {
+    background: pink;
+}
+
+.screen-box {
+    background-image: url("img/embroidery-machine1.jpg");
+}
+
+.machine {
+    /* Sudut X lebih besar untuk efek dari atas */
+}
+
+.plotter {
+    background-color: transparent;
+    border: 3px dotted rgba(255, 0, 0, 0.308);
+
+    --x: -50px;
+    --y: 145px;
+
+    --x: 0px;
+    --y: 0px;
+}
+.plotter::after {
+    content: 'HALF PLOTTER';
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0.308);
+    width: 100px;
+    height: 200px;
+    left: 111px;
+    top: -110px;
+}        
+.plotter::before {
+    content: 'Strong Iron';
+    position: absolute;
+    /* background-color: rgba(255, 0, 0, 0.308); */
+    width: 400px;
+    height: 400px;
+    left: 111px;
+    top: -110px;
+
+    width: 400px;
+    height: 85px;
+    left: 107px;
+    top: -110px;
+    transform: rotateZ(-90deg) translateX(-156px) translateY(-158px);
+    color: white;
+    font-size: x-large;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+.plotter .parallel{
+    border: 2px dashed white;
+    /* transform: translateZ(10px) translateY(var(--y)) translateX(var(--x)); */
+    /* background: url('img/rail-x.png'); */
+    background-image: url('img/debug/rail-x-debug.png');
+}
+.plotter .carriage{
+    /* transform: translateZ(10px) translateY(var(--y)); */
+    /* background: url('img/carriage.png'); */
+    background-image: url('img/debug/carriage-debug.png');
+}
+.hoop-large {
+    width: 261px;
+    height: 346px;
+    left: 353px;
+    top: -39px;
+    /* transform: translateZ(10px) translateY(var(--y)) translateX(var(--x)); */
+    background-image: url('img/debug/large.png');
+}
+
+.machine .fabric {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #FFDAB9;
+    top: 60px;
+    left: 517px;
+    transform: rotateX(90deg) translateZ(7px);
+}
+        
+.machine .axis-xy {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left:0px;
+    bottom: 0;
+    /* transform: rotateX(0deg); */
+    border-left: 2px dashed lime;
+    border-bottom: 2px dashed red;
+}
