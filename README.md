@@ -11,8 +11,9 @@ When it receives GCODE, the animation will start by moving the hoop to the speci
 
 
 ### What inside?
-Every single millimeter in real hardware corresponds exactly to 1 pixel in this simulation. \
-For example, your 400mm rail rods are literally represented here as 400px tall. This simplification is necessary to keep everything simple, enable quick troubleshooting, and ensure an accurate visual representation. The elements are then rotated 90 degrees in 3D space using CSS to achieve a realistic effect.
+Every single millimeter in real hardware corresponds exactly to 1 pixel in this simulation. For example, your 400mm rail rods are literally represented here as 400px tall. 
+
+This simplification is necessary to keep everything simple, enable quick troubleshooting, and ensure an accurate visual representation. The elements are then rotated 90 degrees in 3D space using CSS to achieve a realistic effect.
 
 ## What's Next?
 * I imagine involving sound of sewing machine running in future is not hard.
