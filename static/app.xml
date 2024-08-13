@@ -26,5 +26,9 @@
             <button go="down"  t-on-click="navClick" class="button icon" style="grid-column: 2; grid-row: 3;">⮟</button>
             <button go="left"  t-on-click="navClick" class="button icon" style="grid-column: 1; grid-row: 2;">⮜</button>
         </div>
+        <ul class="stat">
+            <li>X: <t t-out="state.x"/></li>
+            <li>Y: <t t-out="state.y"/></li>
+        </ul>
     </div>
 </templates>

@@ -17,6 +17,7 @@ body {
     background-repeat: no-repeat;
     width: 1000px;
     height: 500px;
+    user-select: none;
 }
 
 .machine {
