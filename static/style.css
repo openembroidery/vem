@@ -63,7 +63,6 @@ body {
     background: url('img/rail-x.png');
     background-size: contain;
     background-repeat: no-repeat;
-    cursor: move;
 }
 .plotter .carriage{
     position: absolute;
@@ -77,12 +76,9 @@ body {
     background: url('img/carriage.png');
     background-size: contain;
     background-repeat: no-repeat;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
-.hoop {
-    cursor: move;
-}
-.hoop.large {
+hoop.large {
     position: absolute;
     width: 261px;
     height: 346px;
@@ -113,4 +109,15 @@ body {
     /* transform: rotateX(0deg); */
     border-left: 2px dashed lime;
     border-bottom: 2px dashed red;
+}
+
+/* CURSORS */
+.cursor-x {
+    cursor: ew-resize
+}
+.cursor-y {
+    cursor: ns-resize;
+}
+.cursor-xy {
+    cursor: move;
 }

@@ -1,6 +1,6 @@
 <templates>
     <div t-name="Vem" class="screen-box">
-        <div class="machine">
+        <div class="3d machine">
             <div class="zero"></div>
             <div class="axis-xy"></div>
             <div class="axis-z"></div>
@@ -14,9 +14,9 @@
 
             <!-- <div class="parallelX"></div> -->
             <div class="plotter" t-ref="plotter" t-attf-style="--x:{{state.x}}; --y:{{state.y}};">
-                <div class="parallel" t-on-mousedown="plotterBeginDrag"></div>
-                <div class="carriage"></div>
-                <div class="hoop large" t-on-mousedown="plotterBeginDrag"></div>
+                <div class="parallel cursor-x" t-on-mousedown="xBeginDrag"></div>
+                <div class="carriage cursor-y" t-on-mousedown="yBeginDrag"></div>
+                <hoop class="large cursor-xy"  t-on-mousedown="xyBeginDrag"></hoop>
             </div>
             <div class="fabric"></div>
         </div>

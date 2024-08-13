@@ -8,6 +8,7 @@ class Vem extends Component {
     setup(){
         this.state = useState({ 
             x:0, y:0, 
+            xLock: false, yLock: false, // locked = ignored
             direction:null, value: 0 
         })
         this.plotterRef = useRef('plotter')
@@ -25,12 +26,21 @@ class Vem extends Component {
         return actions[go]
     }
 
-    plotterBeginDrag(ev){
+    xBeginDrag(ev){
+        this.state.yLock = true;
+        this.xyBeginDrag(ev)
+    }
+    yBeginDrag(ev){
+        this.state.xLock = true;
+        this.xyBeginDrag(ev)
+    }
+    xyBeginDrag(ev){
         console.log('begin drag')
-        const el = this.plotterRef.el;
+        // const el = this.plotterRef.el;
         const offsetX = ev.pageX;
         const offsetY =  ev.pageY;
-        const x = this.state.x, y = this.state.y;
+        // const x = this.state.x, y = this.state.y;
+        const {x,y,xLock,yLock} = this.state;
         let dx, dy;
 
         
@@ -39,12 +49,14 @@ class Vem extends Component {
             dy = ev.pageY - offsetY;
             // el.style.setProperty('--x', `${x+dx}`);
             // el.style.setProperty('--y', `${y+dy}`);
-            this.state.x = x + dx;
-            this.state.y = y + dy;
+            if(!xLock) this.state.x = x + dx;
+            if(!yLock) this.state.y = y + dy;
         }
         const stopDnD = () => {
             window.removeEventListener("mousemove", moveWindow);
-            el.classList.remove('dragging');
+            // el.classList.remove('dragging');
+            this.state.xLock = false;
+            this.state.yLock = false;
             
             if (dy !== undefined && dx !== undefined) {
                 // self.windowService.updatePosition(current.id, dx, dy);
