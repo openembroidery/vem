@@ -11,4 +11,6 @@
 }
 .navigation button {
     font-size: x-large;
+    line-height: 50px;
+    text-align: center;
 }
