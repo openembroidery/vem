@@ -20,5 +20,9 @@ This will make VEM communicate via RS32 (aka. serial port). \
 In case you curios, there is a [video](https://www.youtube.com/watch?v=fArqj-USmjA) to make an Arduino Simuator in JS
 
 
-But I failed to build teathimble myself. (I have no electronic background, you know)  \
+But I failed to build teathimble myself. (I have no electronic background, you know).
 So, if you have a compiled teathimble (.hex) please make a PR or fill an github issue here.
+
+## Thanks
+Martin (aka [markol](https://github.com/markol)). \
+Background picture used here are taken from his [embroidery](https://lordovervolt.com/embroidery) post. In fact that article completness (source-code, explanation) inspires me to start jumping and getting hand dirty. 
