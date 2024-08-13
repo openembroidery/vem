@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/hoops.css">
     <!-- <link rel="stylesheet" href="static/debug.css"> -->
     <link rel="stylesheet" href="static/skeumorphic.css">
     <link rel="stylesheet" href="static/navigation.css">
@@ -29,7 +30,7 @@
             <div class="plotter">
                 <div class="parallel"></div>
                 <div class="carriage"></div>
-                <div class="hoop-large"></div>
+                <div class="hoop large"></div>
             </div>
             <div class="fabric"></div>
         </div>
@@ -41,6 +42,20 @@
         </div>
     </div>
 
+    <script>
+        const state= {x:0, y:0};
+        const plotter = document.querySelector('.plotter');
+        // [btnUp,btnRight,btnDown,btnLeft]
+        const actions = [['y',-1],['x',1],['y',1],['x',-1]]
+        const buttons = document.querySelectorAll('.navigation button');
+        buttons.forEach((button,i) => {
+            button.addEventListener('click', ev=>{
+                const [direction,value] = actions[i]
+                state[direction] += value;
+                plotter.style.setProperty(`--${direction}`, state[direction]+'px')
+            })
+        });
+    </script>
 
 </body>
 

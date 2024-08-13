@@ -76,7 +76,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 }
-.hoop-large {
+.hoop.large {
     position: absolute;
     width: 261px;
     height: 346px;
