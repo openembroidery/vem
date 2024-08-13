@@ -9,6 +9,7 @@ body {
 }
 
 .screen-box {
+    position: relative;
     background-color: #f0f0f0;
     /* padding: 10px; */
     background-image: url("img/embroidery-machine-bg.jpg");
