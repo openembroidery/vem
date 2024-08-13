@@ -8,21 +8,23 @@ Web-based embroidery machine simulation that execute GCODE sent from [Embroideri
 
 ## What?
 When it receives GCODE, the animation will start by moving the hoop to the specified coordinates. You can also do this manually by pressing the up/down/left/right arrow buttons on the screen. \
-I want to involve sound of sewing machine running in future.
 
-## What inside?
+
+### What inside?
 Every single millimeter in real hardware corresponds exactly to 1 pixel in this simulation. \
 For example, your 400mm rail rods are literally represented here as 400px tall. This simplification is necessary to keep everything simple, enable quick troubleshooting, and ensure an accurate visual representation. The elements are then rotated 90 degrees in 3D space using CSS to achieve a realistic effect.
 
 ## What's Next?
-I planned to implement [Teathimble Firmware](https://github.com/openembroidery/teathimble) in javascript to simulate Arduino powered embroidery system. It is now possible by using [wokwi/avr8js](https://github.com/wokwi/avr8js) library.
+* I imagine involving sound of sewing machine running in future is not hard.
+* I planned to implement [Teathimble Firmware](https://github.com/openembroidery/teathimble) in javascript to simulate Arduino powered embroidery system. It is now possible by using [wokwi/avr8js](https://github.com/wokwi/avr8js) library.
 This will make VEM communicate via RS32 (aka. serial port). \
-In case you curios, there is a [video](https://www.youtube.com/watch?v=fArqj-USmjA) to make an Arduino Simuator in JS
-
-
+In case you curios, there is a [video](https://www.youtube.com/watch?v=fArqj-USmjA) to make an Arduino Simuator in JS. \
 But I failed to build teathimble myself. (I have no electronic background, you know).
 So, if you have a compiled teathimble (.hex) please make a PR or fill an github issue here.
 
 ## Thanks
 Martin (aka [markol](https://github.com/markol)). \
-Background picture used here are taken from his [embroidery](https://lordovervolt.com/embroidery) post. In fact that article completness (source-code, explanation) inspires me to start jumping and getting hand dirty. 
+Background picture used here are taken from his [embroidery](https://lordovervolt.com/embroidery) post. In fact that article completness (source-code, explanation) inspires me to start jumping and getting hand dirty here. 
+
+[Photopea](https://photopea.com). \
+Sewing machine picture here is generated via photopea's "Magic Replace" AI feature.
