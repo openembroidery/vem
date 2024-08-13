@@ -43,11 +43,11 @@ body {
     transform: rotateX(90deg) translateZ(387px);
     box-sizing: border-box;
 
-    --x: -50px;
-    --y: 145px;
+    --x: -50;
+    --y: 145;
 
-    --x: 0px;
-    --y: 0px;
+    --xpx: calc(var(--x) * 1px);
+    --ypx: calc(var(--y) * 1px);
 }
 
 .plotter .parallel{
@@ -58,10 +58,11 @@ body {
     left: -122px;
     /* border: 2px dashed white; */
     box-sizing: border-box;
-    transform: translateZ(10px) translateY(var(--y)) translateX(var(--x));
+    transform: translateZ(10px) translateY(var(--ypx)) translateX(var(--xpx));
     background: url('img/rail-x.png');
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: move;
 }
 .plotter .carriage{
     position: absolute;
@@ -71,10 +72,14 @@ body {
     left: 91px;
     /* border: 1px solid white; */
     box-sizing: border-box;
-    transform: translateZ(10px) translateY(var(--y));
+    transform: translateZ(10px) translateY(var(--ypx));
     background: url('img/carriage.png');
     background-size: contain;
     background-repeat: no-repeat;
+    pointer-events: none;
+}
+.hoop {
+    cursor: move;
 }
 .hoop.large {
     position: absolute;
@@ -82,7 +87,7 @@ body {
     height: 346px;
     left: 353px;
     top: -39px;
-    transform: translateZ(10px) translateY(var(--y)) translateX(var(--x));
+    transform: translateZ(10px) translateY(var(--ypx)) translateX(var(--xpx));
     background-image: url('img/large.png');
     background-size: contain;
     background-repeat: no-repeat;

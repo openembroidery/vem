@@ -13,10 +13,10 @@
             
 
             <!-- <div class="parallelX"></div> -->
-            <div class="plotter" t-attf-style="--x:{{state.x}}px; --y:{{state.y}}px;">
-                <div class="parallel"></div>
+            <div class="plotter" t-ref="plotter" t-attf-style="--x:{{state.x}}; --y:{{state.y}};">
+                <div class="parallel" t-on-mousedown="plotterBeginDrag"></div>
                 <div class="carriage"></div>
-                <div class="hoop large"></div>
+                <div class="hoop large" t-on-mousedown="plotterBeginDrag"></div>
             </div>
             <div class="fabric"></div>
         </div>
