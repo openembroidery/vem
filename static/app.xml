@@ -1,0 +1,30 @@
+<templates>
+    <div t-name="Vem" class="screen-box">
+        <div class="machine">
+            <div class="zero"></div>
+            <div class="axis-xy"></div>
+            <div class="axis-z"></div>
+            
+            <!-- <div class="bottom"></div> -->
+            <!-- <div class="top"></div> -->
+            <!-- <div class="front"></div> -->
+            <!-- <div class="back"></div> -->
+            <!-- <div class="side"></div> -->
+            
+
+            <!-- <div class="parallelX"></div> -->
+            <div class="plotter" t-attf-style="--x:{{state.x}}px; --y:{{state.y}}px;">
+                <div class="parallel"></div>
+                <div class="carriage"></div>
+                <div class="hoop large"></div>
+            </div>
+            <div class="fabric"></div>
+        </div>
+        <div class="navigation">
+            <button go="up"    t-on-click="navClick" class="button icon" style="grid-column: 2; grid-row: 1;">⮝</button>
+            <button go="right" t-on-click="navClick" class="button icon" style="grid-column: 3; grid-row: 2;">⮞</button>
+            <button go="down"  t-on-click="navClick" class="button icon" style="grid-column: 2; grid-row: 3;">⮟</button>
+            <button go="left"  t-on-click="navClick" class="button icon" style="grid-column: 1; grid-row: 2;">⮜</button>
+        </div>
+    </div>
+</templates>

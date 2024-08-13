@@ -2,47 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/style.css">
-    <link rel="stylesheet" href="static/hoops.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="static/style.css"/>
+    <link rel="stylesheet" href="static/hoops.css"/>
     <!-- <link rel="stylesheet" href="static/debug.css"> -->
-    <link rel="stylesheet" href="static/skeumorphic.css">
-    <link rel="stylesheet" href="static/navigation.css">
+    <link rel="stylesheet" href="static/skeumorphic.css"/>
+    <link rel="stylesheet" href="static/navigation.css"/>
+    <script type="importmap">{ "imports": { "@odoo/owl": "./static/owl.js" } }</script>
+    <script type="module" src="static/app.js"></script>
 </head>
 
 <body>
 
-    <div class="screen-box">
-        <div class="machine">
-            <div class="zero"></div>
-            <div class="axis-xy"></div>
-            <div class="axis-z"></div>
-            
-            <!-- <div class="bottom"></div> -->
-            <!-- <div class="top"></div> -->
-            <!-- <div class="front"></div> -->
-            <!-- <div class="back"></div> -->
-            <!-- <div class="side"></div> -->
-            
 
-            <!-- <div class="parallelX"></div> -->
-            <div class="plotter">
-                <div class="parallel"></div>
-                <div class="carriage"></div>
-                <div class="hoop large"></div>
-            </div>
-            <div class="fabric"></div>
-        </div>
-        <div class="navigation">
-            <button class="button icon" style="grid-column: 2; grid-row: 1;">⮝</button>
-            <button class="button icon" style="grid-column: 3; grid-row: 2;">⮞</button>
-            <button class="button icon" style="grid-column: 2; grid-row: 3;">⮟</button>
-            <button class="button icon" style="grid-column: 1; grid-row: 2;">⮜</button>
-        </div>
-    </div>
 
-    <script>
+   <!--  <script>
         const state= {x:0, y:0};
         const plotter = document.querySelector('.plotter');
         // [btnUp,btnRight,btnDown,btnLeft]
@@ -55,7 +30,13 @@
                 plotter.style.setProperty(`--${direction}`, state[direction]+'px')
             })
         });
-    </script>
+
+        //? hoop click
+        const hoop = document.querySelector('.hoop')
+        plotter.addEventListener('click', ev=>{
+            debugger
+        })
+    </script> -->
 
 </body>
 

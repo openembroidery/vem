@@ -63,10 +63,11 @@ svg_file = os.path.join(os.path.dirname(__file__), svg_file)
 for size in 'small medium large'.split(' '):
     hoops[size] = part = {}
     path_names = [
-        '%s-inner' % size, 
-        '%s-outer' % size, 
         'workarea',
-        'adapter']
+        '%s-outer' % size, 
+        '%s-inner' % size, 
+        'adapter',
+        ]
     bounding_boxes = find_paths_in_layer(svg_file, size, path_names)
 
     for path_name, bbox in bounding_boxes.items():
