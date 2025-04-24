@@ -1,5 +1,6 @@
 const TEMPLATES = await (await fetch('static/app.xml')).text();
 import { Component, useState, useRef, mount } from "@odoo/owl";
+import {HOOPS} from "./hoops.js";
 
 // Counter component
 class Vem extends Component {
@@ -7,6 +8,8 @@ class Vem extends Component {
 
     setup(){
         this.state = useState({ 
+            hoop: 'large',
+            hoopSpec: HOOPS.large,
             x:0, y:0, 
             xLock: false, yLock: false, // locked = ignored
             direction:null, value: 0 
@@ -24,6 +27,11 @@ class Vem extends Component {
         const actions = [['y',-1],['x',1],['y',1],['x',-1]]
         go = ['up', 'right', 'down', 'left'].indexOf(go)
         return actions[go]
+    }
+
+    switchHoop(ev){
+        const go = ev.target.getAttribute('go')
+        this.state.hoop = go;
     }
 
     xBeginDrag(ev){

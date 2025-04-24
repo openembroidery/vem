@@ -1,4 +1,4 @@
-const HOOPS = {
+export const HOOPS = {
     "small": {
         "inner": [
             -7,

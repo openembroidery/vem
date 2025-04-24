@@ -21,14 +21,20 @@
             <div class="fabric"></div>
         </div>
         <div class="navigation">
-            <button go="up"    t-on-click="navClick" class="button icon" style="grid-column: 2; grid-row: 1;">⮝</button>
-            <button go="right" t-on-click="navClick" class="button icon" style="grid-column: 3; grid-row: 2;">⮞</button>
-            <button go="down"  t-on-click="navClick" class="button icon" style="grid-column: 2; grid-row: 3;">⮟</button>
-            <button go="left"  t-on-click="navClick" class="button icon" style="grid-column: 1; grid-row: 2;">⮜</button>
+            <button go="up"    t-on-click="navClick" class="button skeu icon" style="grid-column: 2; grid-row: 1;">⮝</button>
+            <button go="right" t-on-click="navClick" class="button skeu icon" style="grid-column: 3; grid-row: 2;">⮞</button>
+            <button go="down"  t-on-click="navClick" class="button skeu icon" style="grid-column: 2; grid-row: 3;">⮟</button>
+            <button go="left"  t-on-click="navClick" class="button skeu icon" style="grid-column: 1; grid-row: 2;">⮜</button>
         </div>
         <ul class="stat">
             <li>X: <t t-out="state.x"/></li>
             <li>Y: <t t-out="state.y"/></li>
         </ul>
+        <div class="hoop-switch toolbar">
+            <label>Hoop :</label>
+            <button go="large"  t-on-click="switchHoop" t-att-class="{'active': state.hoop=='large'}">L</button>
+            <button go="medium" t-on-click="switchHoop" t-att-class="{'active': state.hoop=='medium'}">M</button>
+            <button go="small"  t-on-click="switchHoop" t-att-class="{'active': state.hoop=='small'}">S</button>
+        </div>
     </div>
 </templates>

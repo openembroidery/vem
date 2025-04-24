@@ -121,3 +121,26 @@ hoop.large {
 .cursor-xy {
     cursor: move;
 }
+
+.toolbar {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 15px;
+    border: 2px solid currentColor;
+    color: white;
+}
+.toolbar label {
+    padding: 0 15px;
+}
+.toolbar button {
+    padding: 5px 15px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    border-left: 2px solid currentColor;
+}
+.toolbar button.active {
+    background: white;
+    color: black;
+}
